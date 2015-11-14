@@ -7,17 +7,14 @@
 
 	<script type='text/javascript' src='js/search.js'></script>
 
-	<link rel="stylesheet" href="./css/aesthetics.css">
+	<link rel="stylesheet" href="./css/aesthetics.css" type="text/css">
 </head>
 
 <body>
 
 	<div ng-controller='SearchCtrl'>
-		<input type="text" ng-model='searchTerm'>
-		<input type='button' value='What hurts?' ng-click='search(searchTerm)'>
 
-		<br />
-        <div class="body">
+        <div class="bodyImage">
             <img class="bodyImage" src='./resources/body.png' usemap="bodymap"></img>
             <map name="bodymap">
             <area ng-click="search('chest')" alt="" title="chest" shape="rect" coords="106,71,201,111" style="outline:none;" target="_self"/>
@@ -28,10 +25,13 @@
             <area ng-click="search('calves')" alt="" title="calves" shape="rect" coords="105,241,200,281" style="outline:none;" target="_self"     />
             <area shape="rect" coords="298,298,300,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
             </map>
-
-
         </div>
 
+        <div class="searchBox">
+              <input type="text" ng-model='searchTerm'>
+		      <input type='button' value='What hurts?' ng-click='search(searchTerm)'>
+        </div>
+        
 		<div class="filters" id='imagefilters'>
 			<a id='Diet_includeDiet' href='' ng-click='includeDiet()'>
 				<img class='filterIcon' src='./resources/diet.png'>

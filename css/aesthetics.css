@@ -1,1 +1,9 @@
-swoll
+.filterIcon {
+    height: 100px;
+    width: 100px;
+},
+.bodyImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

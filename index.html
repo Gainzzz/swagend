@@ -16,7 +16,20 @@
 
 		<br />
         <div class="body">
+            <img src='./resources/body.png' usemap="bodymap"></img>
+            <map name="bodymap">
+            <area ng-click="search('chest')" alt="" title="chest" shape="rect" coords="106,71,201,111" style="outline:none;" target="_self"/>
+            <area ng-click="search('arms')" alt="" title="arms" shape="rect" coords="34,0,106,97" style="outline:none;" target="_self"     />
+            <area ng-click="search('arms')" alt="" title="arms1" shape="rect" coords="206,0,271,106" style="outline:none;" target="_self"     />
+            <area ng-click="search('abs')" alt="" title="abs" shape="rect" coords="106,112,201,152" style="outline:none;" target="_self"     />
+            <area ng-click="search('thighs')" alt="" title="thighs" shape="rect" coords="106,165,201,205" style="outline:none;" target="_self"     />
+            <area ng-click="search('calves')" alt="" title="calves" shape="rect" coords="105,241,200,281" style="outline:none;" target="_self"     />
+            <area shape="rect" coords="298,298,300,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+            </map>
+
+
         </div>
+
 		<div id='imagefilters'>
 			<a id='Diet_includeDiet' href='' ng-click='includeDiet()'>
 				<img src='./resources/diet.png'>

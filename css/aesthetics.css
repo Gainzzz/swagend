@@ -2,13 +2,16 @@
     height: 100px;
     width: 100px;
 }
+.filters {
+    margin-left: 20%;
+}
+
 .bodyImage {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.filters{
+.searchBox{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 40%;
 }

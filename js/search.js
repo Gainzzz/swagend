@@ -1,8 +1,10 @@
 angular.module('Gainzzz', [])
 
 .controller('SearchCtrl', function($scope){
+	$scope.searchTerm = '';
+	$scope.arrayTerms = ['sdf','asdf'];
 
-	var search = function(searchTerm){
-		window.alert("Working");
+	$scope.search = function(searchTerm){
+		$scope.arrayTerms.push(searchTerm);
 	};
 });

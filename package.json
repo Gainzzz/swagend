@@ -1,0 +1,9 @@
+{
+    "name" : "Gainzzz",
+    "repository" :
+        {
+            "type" : "git",
+            "url" : "https://github.com/Gainzzz/swagend.git"
+        },
+    "dependenceies": "angular"
+}

@@ -1,23 +1,32 @@
 angular.module('Gainzzz', [])
 
-.controller('SearchCtrl', function($scope){
+.controller('SearchCtrl',function($scope, $log){
 	$scope.searchTerm = '';
-	$scope.arrayTerms = ['sdf','asdf'];
+	$scope.arrayTerms = [];
+	$scope.$log = $log;
+	// var pop = function()
 
 	$scope.search = function(searchTerm){
+		// $scope.message(window.location.href);
+		console.log(window.location.href);
 		$scope.arrayTerms.push(searchTerm);
+		// window.location = './results.html';
 	}
 
 	$scope.includeDiet = function(){
-		$scope.arrayTerms.push("includeDiet");
+		if ($scope.arrayTerms.indexOf('includeDiet') == -1)
+			$scope.arrayTerms.push("includeDiet");
 	};
 	$scope.includeInjury = function(){
-		$scope.arrayTerms.push("includeInjury");
+		if ($scope.arrayTerms.indexOf('includeInjury') == -1)
+			$scope.arrayTerms.push("includeInjury");
 	};
 	$scope.includeExercise = function(){
-		$scope.arrayTerms.push("includeExercise");
+		if ($scope.arrayTerms.indexOf('includeExercise') == -1)
+			$scope.arrayTerms.push("includeExercise");
 	};
 	$scope.includeStretch = function(){
-		$scope.arrayTerms.push("includeStretch");
+		if ($scope.arrayTerms.indexOf('includeStretch') == -1)
+			$scope.arrayTerms.push("includeStretch");
 	};
 });

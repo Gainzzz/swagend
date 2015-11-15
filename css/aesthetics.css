@@ -71,3 +71,19 @@ body {
     margin-top:-32%;
     margin-right: 10%;
 }
+
+.diet a:hover{
+    background-color: yellow;
+}
+
+.exercise a:hover {
+    background-color: yellow;
+}
+
+.stretch a:hover {
+    background-color: yellow;
+}
+
+.injury a:hover {
+    background-color: yellow;
+}

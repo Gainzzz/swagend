@@ -46,9 +46,10 @@ angular.module('Gainzzz', ['ngDialog'])
 	$scope.sex = '';
 	$scope.heightin_cm = 175;
 	$scope.weightin_kg = 70;
+	$scope.bmi = 0;
 
-	$scope.bmi = function(heightin_cm, weightin_kg){
+	$scope.calculate = function(heightin_cm, weightin_kg, bmi){
 		var bmi = weightin_kg/(heightin_cm*heightin_cm*100*100;
-		return bmi;
-	};
+		console.log(bmi);
+	}
 });

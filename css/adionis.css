@@ -1,3 +1,7 @@
-body {
-  background-color:black;
+body{
+background-image: url(../resources/gym.jpg);
+}
+
+.panel-heading {
+background-color:white;
 }

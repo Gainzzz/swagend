@@ -1,4 +1,4 @@
-angular.module('Gainzzz', [])
+angular.module('Gainzzz', ['ngDialog'])
 
 .controller('SearchCtrl',function($scope, $log){
 	$scope.searchTerm = '';
@@ -37,5 +37,12 @@ angular.module('Gainzzz', [])
 	$scope.includeStretch = function(){
 		if ($scope.filterTerms.indexOf('includeStretch') == -1)
 			$scope.filterTerms.push("includeStretch");
+	};
+})
+
+.controller('PopupCtrl', function($scope, ngDialog){
+	$scope.popup = function(){
+		window.alert('Working!');
+		//ngDialog.open({templates:'./templates/popup.html'});
 	};
 });

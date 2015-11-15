@@ -13,16 +13,30 @@ video#bgvid {
     background-size: cover; 
 }
 
-.filterIcon {
-    height: 120px;
-    width: 100px;
-    margin-left: auto;
-    margin-right:auto;
-    padding-top: 8%
-}
 .filters {
-    margin-left: 35%;
+    padding-top: 85px;
+    margin-left:30%;
+    
 }
+
+.dietIcon {
+    height:75px;
+    padding-right:30px;
+}
+
+.injuryIcon {
+    height:80px;
+    padding-right:30px;
+}
+
+.exerciseIcon {
+    height:80px;
+    padding-right:30px;
+}
+.stretchIcon {
+    height:80px;
+}
+
 
 .bodyImage {
     opacity:100%;

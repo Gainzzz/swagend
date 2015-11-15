@@ -4,6 +4,7 @@
     <link rel="shortcut icon" href="./resources/icon.png">
     <title>Gainzzz</title>
 	<link rel="stylesheet" href="./css/aesthetics.css" type="text/css">
+    <link rel='stylesheet' href='./css/ngDialog.css' type='text/css'>
 </head>
 
 <body>
@@ -12,7 +13,6 @@
         <source src="resources/weights.mp4" type="video/mp4">
         </video>
     </div>
-
 	<div ng-controller='SearchCtrl'>
 
         <div class="bodyImage">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="searchBox">
-              <input type="text" ng-model='searchTerm'>
+              <input class="search" type="text" placeholder="What's gucci?" ng-model='searchTerm'>
 		      <input type='button' value='What hurts?' ng-click='search(searchTerm)'>
         </div>
 
@@ -51,9 +51,17 @@
 			</a>
 		</div>
 
+<<<<<<< HEAD
+=======
+	</div>
+
+    <div ng-controller='PopupCtrl'>
+        <input type='button' value='Personalize Health' ng-click='popup()'>
+    </div>
+>>>>>>> origin/sioncss
 </body>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
-
     <script type='text/javascript' src='js/search.js'></script>
+    <script type='text/javascript' src='js/ngDialog.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </html>

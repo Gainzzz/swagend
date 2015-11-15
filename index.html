@@ -38,25 +38,25 @@
 
 		<div class="diet col-sm-3" style='width: auto; height: auto; float:left; margin-left: 4%; margin-top:-25%;'>
 			<a id='Diet_includeDiet' href='' ng-click='includeDiet()'>
-				<img class='filterIcon' src='./resources/diet.png'>
+				<img class='filterIcon img-responsive' src='./resources/diet.png'>
 			</a>
         </div>
 
         <div class="injury col-sm-3" style='width: auto; height: auto; float:left; margin-left: 20%; margin-top:-25%;'>
 			<a id='Injury_includeInjury' href='' ng-click='includeInjury()'>
-                <img class='filterIcon' src='./resources/injury.png'>
+                <img class='filterIcon img-responsive' src='./resources/injury.png'>
 			</a>
         </div>
 
         <div class='exercise' style='width: auto; height: auto; float:right; margin-right: 4%; margin-top:-25%;'>
 			<a id='Exercise_includeExercise' href='' ng-click='includeExercise()'>
-                <img class='filterIcon' src='./resources/exercise.png'>
+                <img class='filterIcon img-responsive' src='./resources/exercise.png'>
 			</a>
         </div>
 
         <div class='stretch' style='width: auto; height: auto; float: right; margin-right: 20%; margin-top:-25%;'>
 			<a id='Stretch_includeStretch' href='' ng-click='includeStretch()'>
-                <img class='filterIcon' src='./resources/stretch.png'>
+                <img class='filterIcon img-responsive' src='./resources/stretch.png'>
 			</a>
 		</div>
 
@@ -64,20 +64,17 @@
               <input type="text" ng-model='searchTerm'>
               <input type='button' value='Search' ng-click='search(searchTerm)'>
         </div>
-
-        <div class='toPersonal' style='margin-top:-5%; margin-left: 45%;'>
+        <!--
+        <div class='toPersonal' style='top: 100%; margin-left: 45%'>
             <a id='Injury_includeInjury' href='#personal'>
                 <img class='filterIcon' src='./resources/down.png'>
             </a>
         </div>
+    -->
 
-    <div style='height:100px; width:500px; color:green; font-size:16px;'>
-      searchTerm: {{searchTerm}}<br/>
-      filterTerms: {{filterTerms}}
-    </div>
 	</div>
 </a>
-
+<!--
 <a name='personal'>
     <div class='toMain' style='margin-top:0%; margin-left: 45%;'>
             <a id='Injury_includeInjury' href='#main' ng-click='includeInjury()'>
@@ -91,7 +88,6 @@
 <div style='height:50%;width:100%;'>
 <fieldset>
 <div class="loginbox">
-<!-- Text input-->
 <div class="form-group"><br/>
   <label class="col-md-4 control-label" for="name">Name</label>  
   <div class="col-md-5">
@@ -100,7 +96,6 @@
   </div>
 </div>
 
-<!-- Age input -->
 <div class='form-group'>
   <label class="col-md-4 control-label" for="age">Age</label> 
   <div class="col-md-5">
@@ -108,7 +103,6 @@
   </div>
 </div>
 
-<!-- Height input -->
 <div class='form-group'>
   <label class="col-md-4 control-label" for="height">Height</label> 
   <div class="col-md-5">
@@ -116,7 +110,6 @@
   </div>
 </div>
 
-<!-- Weight input -->
 <div class='form-group'>
   <label class="col-md-4 control-label" for="weight">Weight</label> 
   <div class="col-md-5">
@@ -124,7 +117,6 @@
   </div>
 </div>
 
-<!-- Multiple Radios -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="sex">Gender</label>
   <div class="col-md-4">
@@ -143,7 +135,6 @@
   </div>
 </div>
 
-<!-- Button -->
 <div class='form-group'>
     <label class='col-md-4 control-label' for='calculate'>Calculate</label>
     <div class='col-md-5'>
@@ -193,6 +184,7 @@
   <img src='./resources/chart.svg' style='width: 80%; height:auto; margin-left:12%; margin-top:4%;margin-bottom:4%;'>
 </div>
 </a>
+-->
 </body>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
     <script type='text/javascript' src='js/search.js'></script>

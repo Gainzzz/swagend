@@ -14,11 +14,9 @@ video#bgvid {
 }
 
 .filterIcon {
-    height: 120px;
     width: 100px;
     margin-left: auto;
     margin-right:auto;
-    padding-top: 8%
 }
 .filters {
     margin-left: 35%;
@@ -90,18 +88,6 @@ body {
     z-index:3 !important;
 }
 
-.diet a:hover{
-    background-color: yellow;
-}
-
-.exercise a:hover {
-    background-color: yellow;
-}
-
-.stretch a:hover {
-    background-color: yellow;
-}
-
-.injury a:hover {
-    background-color: yellow;
+.filterIcon:hover{
+    width: 125px;
 }

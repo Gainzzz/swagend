@@ -22,15 +22,15 @@ $(document).ready(function(){
 	    $("#muscle_group").html(data.muscle.name);
 
 	    $.each(data.exercises, function( i, obj ) {
-	    	$("#exercises").append('<li class="list-group-item">'+obj.name+'</li>');
+	    	$("#exercises").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
 		});
 
 		$.each(data.stretches, function( i, obj ) {
-		    $("#stretches").append('<li class="list-group-item">'+obj.name+'</li>');
+	    	$("#stretches").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
 		});
 
 		$.each(data.injuries, function( i, obj ) {
-		    $("#injuries").append('<li class="list-group-item">'+obj.name+'</li>');
+	    	$("#injuries").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
 		});
 
 	  });

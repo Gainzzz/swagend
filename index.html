@@ -8,6 +8,11 @@
 </head>
 
 <body>
+    <div class="vid">
+        <video autoplay loop poster="auto" id="bgvid">
+        <source src="resources/weights.mp4" type="video/mp4">
+        </video>
+    </div>
 	<div ng-controller='SearchCtrl'>
 
         <div class="bodyImage">
@@ -28,11 +33,12 @@
 		      <input type='button' value='What hurts?' ng-click='search(searchTerm)'>
         </div>
 
-		<div class="filters">
+		<div class="diet">
 			<a id='Diet_includeDiet' href='' ng-click='includeDiet()'>
 				<img class='filterIcon' src='./resources/diet.png'>
 			</a>
 
+        <div class="injury">
 			<a id='Injury_includeInjury' href='' ng-click='includeInjury()'>
                 <img class='filterIcon' src='./resources/injury.png'>
 			</a>
@@ -46,8 +52,6 @@
 			</a>
 		</div>
 
-		<div><p>{{searchTerm}}</p></div>
-		<div><p>{{filterTerms}}</p></div>
 	</div>
 
     <div ng-controller='PopupCtrl'>

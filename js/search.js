@@ -19,7 +19,7 @@ angular.module('Gainzzz', [])
 		$.each($scope.filterTerms, function(index, value){
 			redirect_url += "&" + value + "=True";
 		});
-		window.location = redirect_url;
+		window.location.assign(redirect_url);
 	}
 
 	$scope.includeDiet = function(){

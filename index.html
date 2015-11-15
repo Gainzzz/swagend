@@ -4,6 +4,7 @@
     <link rel="shortcut icon" href="./resources/icon.png">
     <title>Gainzzz</title>
 	<link rel="stylesheet" href="./css/aesthetics.css" type="text/css">
+    <link rel='stylesheet' href='./css/ngDialog.css' type='text/css'>
 </head>
 
 <body>
@@ -12,7 +13,6 @@
         <source src="resources/weights.mp4" type="video/mp4">
         </video>
     </div>
-
 	<div ng-controller='SearchCtrl'>
 
         <div class="bodyImage">
@@ -38,7 +38,6 @@
 				<img class='filterIcon' src='./resources/diet.png'>
 			</a>
 
-        <>
 			<a id='Injury_includeInjury' href='' ng-click='includeInjury()'>
                 <img class='filterIcon' src='./resources/injury.png'>
 			</a>
@@ -54,9 +53,12 @@
 
 	</div>
 
+    <div ng-controller='PopupCtrl'>
+        <input type='button' value='Personalize Health' ng-click='popup()'>
+    </div>
 </body>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
-
     <script type='text/javascript' src='js/search.js'></script>
+    <script type='text/javascript' src='js/ngDialog.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </html>

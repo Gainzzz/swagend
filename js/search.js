@@ -40,9 +40,15 @@ angular.module('Gainzzz', ['ngDialog'])
 	};
 })
 
-.controller('PopupCtrl', function($scope, ngDialog){
-	$scope.popup = function(){
-		window.alert('Working!');
-		//ngDialog.open({templates:'./templates/popup.html'});
+.controller('PersonalCtrl', function($scope){
+	$scope.username = '';
+	$scope.age = '';
+	$scope.sex = '';
+	$scope.heightin_cm = 175;
+	$scope.weightin_kg = 70;
+
+	$scope.bmi = function(heightin_cm, weightin_kg){
+		var bmi = weightin_kg/(heightin_cm*heightin_cm*100*100;
+		return bmi;
 	};
 });

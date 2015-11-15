@@ -70,6 +70,26 @@ body {
     float: right;
     margin-top:-32%;
     margin-right: 10%;
+    border: 1px solid yellow;
+}
+
+.livechart {
+    height:72%;
+    width:87%;
+    margin-left: 10%;
+    margin-top:-51%;
+    border: 1px solid yellow;
+}
+
+.dot {
+    margin-top:66px;
+    margin-left:100px;
+    max-height:5px;
+    max-width: 5px;
+    font-size:50px;
+    font-weight: bold;
+    color:black; 
+    z-index:3 !important;
 }
 
 .diet a:hover{

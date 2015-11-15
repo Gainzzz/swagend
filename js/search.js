@@ -1,4 +1,4 @@
-angular.module('Gainzzz', ['ngDialog'])
+angular.module('Gainzzz', [])
 
 .controller('SearchCtrl',function($scope, $log){
 	$scope.searchTerm = '';
@@ -23,19 +23,19 @@ angular.module('Gainzzz', ['ngDialog'])
 	}
 
 	$scope.includeDiet = function(){
-		if ($scope.filterTerms.indexOf('includeDiet') == -1)
+		//if ($scope.filterTerms.indexOf('includeDiet') == -1)
 			$scope.filterTerms.push("includeDiet");
 	};
 	$scope.includeInjury = function(){
-		if ($scope.filterTerms.indexOf('includeInjury') == -1)
+		//if ($scope.filterTerms.indexOf('includeInjury') == -1)
 			$scope.filterTerms.push("includeInjury");
 	};
 	$scope.includeExercise = function(){
-		if ($scope.filterTerms.indexOf('includeExercise') == -1)
+		//if ($scope.filterTerms.indexOf('includeExercise') == -1)
 			$scope.filterTerms.push("includeExercise");
 	};
 	$scope.includeStretch = function(){
-		if ($scope.filterTerms.indexOf('includeStretch') == -1)
+		//if ($scope.filterTerms.indexOf('includeStretch') == -1)
 			$scope.filterTerms.push("includeStretch");
 	};
 })
@@ -48,8 +48,13 @@ angular.module('Gainzzz', ['ngDialog'])
 	$scope.weightin_kg = 70;
 	$scope.bmi = 0;
 
-	$scope.calculate = function(heightin_cm, weightin_kg, bmi){
-		var bmi = weightin_kg/(heightin_cm*heightin_cm*100*100;
-		console.log(bmi);
-	}
+	$scope.ycoord = $scope.heightin_cm;
+	$scope.xcoord = $scope.weightin_kg;
+
+	$scope.calculate = function(heightin_cm, weightin_kg){
+		$scope.bmi = weightin_kg/(heightin_cm*heightin_cm*100*100);
+		$scope.ycoord = (heightin_cm - 195)*3.3;
+		$scope.xcoord = (weightin_kg - 43)*3.7;
+		return bmi;
+	};
 });

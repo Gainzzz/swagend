@@ -17,7 +17,7 @@
     </div>
 
     <div class='brandname'>
-        <h1 style='font-size: 70px;'>MyGains.io</h1>
+        <h1 style='font-size: 70px;'>MyGains<span style='font-size: 50px;'>.io</span></h1>
     </div>
     
 	<div ng-controller='SearchCtrl'>
@@ -64,10 +64,15 @@
         </div>
 
         <div class='toPersonal' style='margin-top:-5%; margin-left: 45%;'>
-            <a id='Injury_includeInjury' href='#personal' ng-click='includeInjury()'>
+            <a id='Injury_includeInjury' href='#personal'>
                 <img class='filterIcon' src='./resources/down.png'>
             </a>
         </div>
+
+    <div style='height:100px; width:500px; color:green; font-size:16px;'>
+      searchTerm: {{searchTerm}}<br/>
+      filterTerms: {{filterTerms}}
+    </div>
 	</div>
 </a>
 
@@ -86,7 +91,7 @@
 <div class="form-group"><br/>
   <label class="col-md-4 control-label" for="name">Name</label>  
   <div class="col-md-5">
-  <input id="name" name="name" type="text" placeholder="John Smith" class="form-control input-md" required="">
+  <input id="name" name="name" type="text" ng-model='username' placeholder="John Smith" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -95,7 +100,7 @@
 <div class='form-group'>
   <label class="col-md-4 control-label" for="age">Age</label> 
   <div class="col-md-5">
-  <input id='age' name='age' type='number' placeholder='18' class='form-control input-md' required=''>
+  <input id='age' name='age' type='number' ng-model='age' placeholder='18' class='form-control input-md' required=''>
   </div>
 </div>
 
@@ -103,7 +108,7 @@
 <div class='form-group'>
   <label class="col-md-4 control-label" for="height">Height</label> 
   <div class="col-md-5">
-  <input id='height' name='height' type='number' placeholder='175' class='form-control input-md' required=''>
+  <input id='height' name='height' type='number' ng-model='heightin_cm' placeholder='175' class='form-control input-md' required=''>
   </div>
 </div>
 
@@ -111,7 +116,7 @@
 <div class='form-group'>
   <label class="col-md-4 control-label" for="weight">Weight</label> 
   <div class="col-md-5">
-  <input id='weight' name='weight' type='number' placeholder='70' class='form-control input-md' required=''>
+  <input id='weight' name='weight' type='number' ng-model='weightin_kg' placeholder='70' class='form-control input-md' required=''>
   </div>
 </div>
 
@@ -121,13 +126,13 @@
   <div class="col-md-4">
   <div class="radio">
     <label for="sex-0">
-      <input type="radio" name="sex" id="sex-0" value="1" checked="checked">
+      <input type="radio" name="sex" id="sex-0" value="1" ng-model='sex' checked="checked">
       Male
     </label>
     </div>
   <div class="radio">
     <label for="sex-1">
-      <input type="radio" name="sex" id="sex-1" value="0">
+      <input type="radio" name="sex" id="sex-1" value="0" ng-model='sex'>
       Female
     </label>
     </div>
@@ -138,19 +143,33 @@
 <div class='form-group'>
     <label class='col-md-4 control-label' for='calculate'>Calculate</label>
     <div class='col-md-5'>
-        <button id='calculate' name='calculate' class='btn btn-primary' style='width:150px;' ng-click='calculate()'>BMI</button>
+        <input type='button' style='color:black;' value='B.M.I.' ng-click='calculate(heightin_cm, weightin_kg);'>
     </div>
 </div>
+
+
 </div>
 </fieldset>
 </form>
 
     <div class='personalinfo'>
-        <h3>BMI: {{bmi}}</h3>
-        <img src='./resources/bmi_graph.png'>
+        <h3>Body Mass Index: {{bmi}}</h3>
+        <img src='./resources/bmi_graph.png' style='z-index:1;'>
+          <div class='livechart'>
+            <div class='dot' ng-style="{'margin-top': (ycoord + 'px'), 'margin-left': (xcoord; + 'px')}">.</div>
+          </div>
     </div>
     
+    <div style='height:100px; width:300px; font-size:16px; color:green;'>
+      Name: {{username}}<br />
+      Age: {{age}}<br />
+      Gender: {{sex}}<br />
+      Height: {{heightin_cm}}<br />
+      Weight: {{weightin_kg}}<br />
+      x-coord: {{xcoord}}<br/>
+      y-coord: {{ycoord}}<br/>
     </div>
+  </div>
 </a>
 </body>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>

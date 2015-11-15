@@ -5,13 +5,21 @@ angular.module('Gainzzz', [])
 	$scope.filterTerms = [];
 	$scope.$log = $log;
 	// var pop = function()
+	//$scope.muscleID = http
 
 	$scope.search = function(searchTerm){
-		var redirect_url = "results.html?muscle_id=" + searchTerm;
+		var redirect_url;
+		$.ajax({
+			url: "http://52.88.98.2:8000/muscle/"+searchTerm+"/",
+			method: "GET",
+			async: false
+		}).done(function(obj){
+			redirect_url = "results.html?muscle_id=" + obj.id;
+		});
 		$.each($scope.filterTerms, function(index, value){
 			redirect_url += "&" + value + "=True";
 		});
-		console.log(redirect_url);
+		window.location = redirect_url;
 	}
 
 	$scope.includeDiet = function(){

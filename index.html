@@ -5,6 +5,8 @@
     <title>Gainzzz</title>
 	<link rel="stylesheet" href="./css/aesthetics.css" type="text/css">
     <link rel='stylesheet' href='./css/ngDialog.css' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,27 +34,33 @@
               <input class="search" type="text" placeholder="What's gucci?" ng-model='searchTerm'>
 		      <input type='button' value='What hurts?' ng-click='search(searchTerm)'>
         </div>
-
-<div class="filters">
+<div class="row">
+<div class="col-xs-3 text-center">
 			<a id='Diet_includeDiet' href='' ng-click='includeDiet()'>
 				<img class='dietIcon' src='./resources/diet.png'>
 			</a>
+</div>
+<div class="col-xs-3 text-center">
 
 			<a id='Injury_includeInjury' href='' ng-click='includeInjury()'>
                 <img class='injuryIcon' src='./resources/injury.png'>
 			</a>
-            
+            </div>
+            <div class="col-xs-3 text-center">
+
             <a id='Exercise_includeExercise' href='' ng-click='includeExercise()'>
                 <img class='exerciseIcon' src='./resources/exercise.png'>
 			</a>
- 
+ </div><div class="col-xs-3 text-center">
+
             <a id='Stretch_includeStretch' href='' ng-click='includeStretch()'>
                 <img class='stretchIcon' src='./resources/stretch.png'>
 			</a>
+
 		</div>
 
     </div>
-
+</div>
     <div ng-controller='PopupCtrl'>
         <input type='button' value='Personalize Health' ng-click='popup()'>
     </div>

@@ -9,7 +9,7 @@ angular.module('Gainzzz', [])
 	$scope.search = function(searchTerm){
 		// $scope.message(window.location.href);
 		console.log(window.location.href);
-		$scope.arrayTerms.push(searchTerm);
+		resultQuery(searchTerm);
 		// window.location = './results.html';
 	}
 
@@ -29,4 +29,26 @@ angular.module('Gainzzz', [])
 		if ($scope.filterTerms.indexOf('includeStretch') == -1)
 			$scope.filterTerms.push("includeStretch");
 	};
+
+	function resultQuery(querystring){
+		if (typeof(querystring) != 'string')
+			return;
+		else
+		{
+			switch (querystring) {
+				case 'arms':
+					return window.location = './results.html?muscle_id=' + 21;
+
+				case 'chest':
+					return window.location = './results.html?muscle_id=' + 16;
+					// break;
+				case 'thighs':
+					return window.location = './results.html?muscle_id=' + 19;
+					// break;
+
+				default:
+					console.log('no results');
+			}
+		}
+	}
 });

@@ -7,10 +7,11 @@ angular.module('Gainzzz', [])
 	// var pop = function()
 
 	$scope.search = function(searchTerm){
-		// $scope.message(window.location.href);
-		console.log(window.location.href);
-		$scope.arrayTerms.push(searchTerm);
-		// window.location = './results.html';
+		var redirect_url = "results.html?muscle_id=" + searchTerm;
+		$.each($scope.filterTerms, function(index, value){
+			redirect_url += "&" + value + "=True";
+		});
+		console.log(redirect_url);
 	}
 
 	$scope.includeDiet = function(){

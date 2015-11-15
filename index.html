@@ -3,6 +3,8 @@
 <head>
     <link rel="shortcut icon" href="./resources/icon.png">
     <title>Gainzzz</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<link rel="stylesheet" href="./css/aesthetics.css" type="text/css">
     <link rel='stylesheet' href='./css/ngDialog.css' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -85,7 +87,7 @@
 
     <div id='personalized' ng-controller='PersonalCtrl' style='color:white;'>
         <form class="form-horizontal">
-          
+
 <div style='height:50%;width:100%;'>
 <fieldset>
 <div class="loginbox">
@@ -162,6 +164,12 @@
           </div>
     </div>
 </div>
+  
+  <div class='toCommunity' style='margin-top:5%; margin-left: 45%;'>
+            <a id='Injury_includeInjury' href='#community'>
+                <img class='filterIcon' src='./resources/down.png'>
+            </a>
+        </div>
 
     <div style='height:100px; width:300px; font-size:16px; color:green;'>
       Name: {{username}}<br />
@@ -173,6 +181,17 @@
       y-coord: {{ycoord}}<br/>
     </div>
   </div>
+</a>
+
+<a name='community'>
+  <div class='backtoPersonal' style='margin-top:1%; margin-left: 45%;'>
+            <a id='Injury_includeInjury' href='#personal' ng-click=''>
+                <img class='filterIcon' src='./resources/up.png'>
+            </a>
+        </div>
+<div class='communitydata' ng-controller='CommunityCtrl'>
+  <img src='./resources/chart.svg' style='width: 80%; height:auto; margin-left:12%; margin-top:4%;margin-bottom:4%;'>
+</div>
 </a>
 </body>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>

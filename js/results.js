@@ -13,6 +13,7 @@ var getQueryString = function ( field, url ) {
 
 $(document).ready(function(){
 	var muscle_id = getQueryString('muscle_id');
+	$(".muscle_id").val(muscle_id);
 	$.ajax({
 	  method: "GET",
 	  crossDomain: true,
@@ -22,16 +23,16 @@ $(document).ready(function(){
 	    $("#muscle_group").html(data.muscle.name);
 
 	    $.each(data.exercises, function( i, obj ) {
-	    	$("#exercises").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
+	    	$("#exercises").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 		$.each(data.stretches, function( i, obj ) {
-	    	$("#stretches").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
+	    	$("#stretches").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 		$.each(data.injuries, function( i, obj ) {
-	    	$("#injuries").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'</li>');
+	    	$("#injuries").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 	  });
-})
+});

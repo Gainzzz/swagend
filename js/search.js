@@ -2,7 +2,7 @@ angular.module('Gainzzz', [])
 
 .controller('SearchCtrl',function($scope, $log){
 	$scope.searchTerm = '';
-	$scope.arrayTerms = [];
+	$scope.filterTerms = [];
 	$scope.$log = $log;
 	// var pop = function()
 
@@ -14,19 +14,19 @@ angular.module('Gainzzz', [])
 	}
 
 	$scope.includeDiet = function(){
-		if ($scope.arrayTerms.indexOf('includeDiet') == -1)
-			$scope.arrayTerms.push("includeDiet");
+		if ($scope.filterTerms.indexOf('includeDiet') == -1)
+			$scope.filterTerms.push("includeDiet");
 	};
 	$scope.includeInjury = function(){
-		if ($scope.arrayTerms.indexOf('includeInjury') == -1)
-			$scope.arrayTerms.push("includeInjury");
+		if ($scope.filterTerms.indexOf('includeInjury') == -1)
+			$scope.filterTerms.push("includeInjury");
 	};
 	$scope.includeExercise = function(){
-		if ($scope.arrayTerms.indexOf('includeExercise') == -1)
-			$scope.arrayTerms.push("includeExercise");
+		if ($scope.filterTerms.indexOf('includeExercise') == -1)
+			$scope.filterTerms.push("includeExercise");
 	};
 	$scope.includeStretch = function(){
-		if ($scope.arrayTerms.indexOf('includeStretch') == -1)
-			$scope.arrayTerms.push("includeStretch");
+		if ($scope.filterTerms.indexOf('includeStretch') == -1)
+			$scope.filterTerms.push("includeStretch");
 	};
 });

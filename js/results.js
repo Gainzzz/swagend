@@ -23,15 +23,15 @@ $(document).ready(function(){
 	    $("#muscle_group").html(data.muscle.name);
 
 	    $.each(data.exercises, function( i, obj ) {
-	    	$("#exercises").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
+	    	$("#exercises").append('<li class="list-group-item text-capitalize">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 		$.each(data.stretches, function( i, obj ) {
-	    	$("#stretches").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
+	    	$("#stretches").append('<li class="list-group-item text-capitalize">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 		$.each(data.injuries, function( i, obj ) {
-	    	$("#injuries").append('<li class="list-group-item">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
+	    	$("#injuries").append('<li class="list-group-item text-capitalize">'+obj.name+'</br>'+obj.description+'<img class="img-responsive" src="'+obj.image+'"/></li>');
 		});
 
 	  });
